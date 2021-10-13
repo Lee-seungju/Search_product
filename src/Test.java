@@ -1,5 +1,7 @@
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
 import java.util.*;
 
 public class Test {
@@ -17,10 +19,12 @@ public class Test {
 
     public void n_search(String search) {
         try {
-            Naver = new ChromeDriver();
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--headless");
+            Naver = new ChromeDriver(options);
 
             // 네이버 쇼핑 홈페이지로 들어간다.
-            Naver.get("http://search.shopping.naver.com/search/all?query=&frm=NVSHATC");
+            Naver.get("https://www.coupang.com/");
 
             // 검색창에 입력할 텍스트타입 공란을 찾는다.
             element = Naver.findElement(By.className("searchInput_search_input__1Eclz"));
@@ -58,7 +62,10 @@ public class Test {
     }
 
     public void e_search(String search) {
-        eleven = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        eleven = new ChromeDriver(options);
+
         eleven.get("http://www.11st.co.kr/?gclid=Cj0KCQjwwY-LBhD6ARIsACvT72NHD0munKKYvBwdOMDwMXYb3XmWzfQDE3UDgHKBnKK21xyW4EGjSvgaAszSEALw_wcB&utm_term=E_11%B9%F8%B0%A1&utm_campaign=0311+PC+%BA%EA%B7%A3%B5%E5+%C0%CF%C4%A1+%C4%B7%C6%E4%C0%CE+%BD%C5%B1%D4+BO&utm_source=%B1%B8%B1%DB_PC_S&utm_medium=%B0%CB%BB%F6");
         element = eleven.findElement(By.xpath("//*[@id=\"tSearch\"]/form/fieldset/input"));
 
