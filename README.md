@@ -10,7 +10,7 @@
 
 셀레니움 사용법 - [공식 사이트](https://www.selenium.dev/documentation/webdriver/browser_manipulation/)
 
-셀레니움 사용법 - [예제](https://www.selenium.dev/documentation/webdriver/browser_manipulation/)
+셀레니움 사용법 - [예제](https://todaycode.tistory.com/5)
 
 # 기한
 21.10.11 ~ 21.10.18
